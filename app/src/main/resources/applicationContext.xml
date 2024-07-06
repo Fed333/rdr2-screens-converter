@@ -10,5 +10,17 @@
 
     <context:property-placeholder location="application.properties"/>
 
+    <bean name="RDR2ScreensConverterRunner" class="com.romanko.rdr2.screens.converter.app.runner.RDR2ScreensConverterRunner">
+        <constructor-arg ref="inputParamsExtractor"/>
+        <constructor-arg ref="PRDRDScreenshotsConverter"/>
+    </bean>
+
+    <bean name="inputParamsExtractor" class="com.romanko.rdr2.screens.converter.app.component.input.params.InputParamsExtractor"/>
+
+    <bean name="PRDRScreenshotConverter" class="com.romanko.rdr2.screens.converter.app.service.PRDRScreenshotConverter"/>
+
+    <bean name="PRDRDScreenshotsConverter" class="com.romanko.rdr2.screens.converter.app.service.PRDRScreenshotsConverter">
+        <constructor-arg ref="PRDRScreenshotConverter"/>
+    </bean>
 
 </beans>
