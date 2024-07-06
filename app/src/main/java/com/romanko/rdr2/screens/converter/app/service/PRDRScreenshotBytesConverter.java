@@ -12,7 +12,8 @@ public class PRDRScreenshotBytesConverter {
         log.debug("Converting bytes...");
         int soi = -1;
         for (int i = 1; i < prdrBytes.length; i++) {
-            if (prdrBytes[i - 1] == (byte)255 && prdrBytes[i] == (byte)216) {
+            byte ff = (byte) 255, d8 = (byte) 216;
+            if (prdrBytes[i - 1] == ff && prdrBytes[i] == d8) {
                 soi = i - 1;
                 break;
             }
