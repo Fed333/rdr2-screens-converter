@@ -13,14 +13,17 @@
     <bean name="RDR2ScreensConverterRunner" class="com.romanko.rdr2.screens.converter.app.runner.RDR2ScreensConverterRunner">
         <constructor-arg ref="inputParamsExtractor"/>
         <constructor-arg ref="PRDRDScreenshotsConverter"/>
+        <constructor-arg ref="convertedBytesScreenshotsFileWriter"/>
     </bean>
 
     <bean name="inputParamsExtractor" class="com.romanko.rdr2.screens.converter.app.component.input.params.InputParamsExtractor"/>
 
-    <bean name="PRDRScreenshotConverter" class="com.romanko.rdr2.screens.converter.app.service.PRDRScreenshotConverter"/>
+    <bean name="PRDRScreenshotConverter" class="com.romanko.rdr2.screens.converter.app.service.PRDRScreenshotBytesConverter"/>
 
-    <bean name="PRDRDScreenshotsConverter" class="com.romanko.rdr2.screens.converter.app.service.PRDRScreenshotsConverter">
+    <bean name="PRDRDScreenshotsConverter" class="com.romanko.rdr2.screens.converter.app.service.PRDRScreenshotsBytesConverter">
         <constructor-arg ref="PRDRScreenshotConverter"/>
     </bean>
+
+    <bean name="convertedBytesScreenshotsFileWriter" class="com.romanko.rdr2.screens.converter.app.service.JpgConvertedBytesScreenshotsFileWriter"/>
 
 </beans>

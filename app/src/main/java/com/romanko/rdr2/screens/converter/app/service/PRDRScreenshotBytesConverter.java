@@ -3,10 +3,9 @@ package com.romanko.rdr2.screens.converter.app.service;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Arrays;
-import java.util.IllegalFormatConversionException;
 
 @Slf4j
-public class PRDRScreenshotConverter {
+public class PRDRScreenshotBytesConverter {
 
     public byte[] convertToJPG(byte[] prdrBytes) {
 
@@ -23,6 +22,7 @@ public class PRDRScreenshotConverter {
             throw new IllegalArgumentException("Given file is not a valid prdr file. JPG SOI was not found.");
         }
         byte[] jpgBytes = Arrays.copyOfRange(prdrBytes, soi, prdrBytes.length);
+        log.debug("Bytes have been successfully converted to jpg.");
         return jpgBytes;
     }
 

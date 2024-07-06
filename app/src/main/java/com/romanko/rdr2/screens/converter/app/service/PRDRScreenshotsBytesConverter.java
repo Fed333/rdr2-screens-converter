@@ -10,9 +10,9 @@ import java.util.Map;
 
 @Slf4j
 @RequiredArgsConstructor
-public class PRDRScreenshotsConverter {
+public class PRDRScreenshotsBytesConverter {
 
-    private final PRDRScreenshotConverter screenshotConverter;
+    private final PRDRScreenshotBytesConverter screenshotConverter;
 
     public Map<String, byte[]> convertScreenshots(String sourcePath, String[] fileNames) {
         Map<String, byte[]> convertedFileBytesMap = new HashMap<>();
