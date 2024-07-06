@@ -4,8 +4,8 @@ This program serves as a converter for converting in-game screenshots taken in [
 
 ## Synopsis
 
-> `java -jar rdr2-screens-converter.jar [source-path-to-in-game-screenshosts] [destination-path-of-converted-screenshots]`
+`java -jar rdr2-screens-converter.jar  src="[source-path-to-in-game-screenshosts]" dst="[destination-path-of-converted-screenshots]" files="[comma-separated-names-of-files-being-converted]"`
 
 ## Usage example
 
-> `java -jar rdr2-screens-converter.jar "C:\Users\path\to\screenshots" "E:\destination\path\of\converted\screenshots"`
+> `java -jar rdr2-screens-converter.jar src="C:\Users\Roman\Documents\Rockstar Games\Red Dead Redemption 2\Profiles\E3A97CC0" dst="E:\Games\Red Dead Redemption 2\screenshots" files="PRDR31000493717_1,PRDR310098373_1"`
